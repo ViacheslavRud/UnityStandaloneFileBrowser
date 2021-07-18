@@ -1,0 +1,13 @@
+{
+  "name": "com.viacheslav-rud.standalone-file-browser",
+  "version": "1.2.0",
+  "displayName": "Standalone File Browser",
+  "keywords": ["file", "folder", "directory", "browser", "explorer"],
+  "author": {
+    "name": "Viacheslav Rud",
+    "email": "rudviacheslavv@gmail.com",
+    "url": "https://github.com/ViacheslavRud/UnityStandaloneFileBrowser"
+  },
+  "description": "A simple wrapper for native file dialogs on Windows/Mac/Linux. A fork from https://github.com/gkngkc/UnityStandaloneFileBrowser, author of original repo: Gökhan Gökçe",
+  "type": "library"
+}

@@ -2,6 +2,9 @@
 
 A simple wrapper for native file dialogs on Windows/Mac/Linux.
 
+Forked from https://github.com/gkngkc/UnityStandaloneFileBrowser. 
+The package can be imported via [Package Manager](https://docs.unity3d.com/Manual/Packages.html).
+
 - Works in editor and runtime.
 - Open file/folder, save file dialogs supported.
 - Multiple file selection.
