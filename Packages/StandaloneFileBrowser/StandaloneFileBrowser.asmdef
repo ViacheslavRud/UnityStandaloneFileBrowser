@@ -1,6 +1,6 @@
 {
     "name": "StandaloneFileBrowser",
-    "rootNamespace": "",
+    "rootNamespace": "StandaloneFileBrowser",
     "references": [],
     "includePlatforms": [
         "Editor",

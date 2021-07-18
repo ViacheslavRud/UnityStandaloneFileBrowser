@@ -2,13 +2,14 @@ using System.Text;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using StandaloneFileBrowser;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using SFB;
 
 [RequireComponent(typeof(Button))]
-public class CanvasSampleOpenFileImage : MonoBehaviour, IPointerDownHandler {
+public class CanvasSampleOpenFileImage : MonoBehaviour, IPointerDownHandler
+{
     public RawImage output;
 
 #if UNITY_WEBGL && !UNITY_EDITOR
@@ -32,20 +33,24 @@ public class CanvasSampleOpenFileImage : MonoBehaviour, IPointerDownHandler {
     //
     public void OnPointerDown(PointerEventData eventData) { }
 
-    void Start() {
+    private void Start()
+    {
         var button = GetComponent<Button>();
         button.onClick.AddListener(OnClick);
     }
 
-    private void OnClick() {
-        var paths = StandaloneFileBrowser.OpenFilePanel("Title", "", ".png", false);
-        if (paths.Length > 0) {
+    private void OnClick()
+    {
+        string[] paths = FileBrowser.OpenFilePanel("Title", "", ".png", false);
+        if (paths.Length > 0)
+        {
             StartCoroutine(OutputRoutine(new System.Uri(paths[0]).AbsoluteUri));
         }
     }
 #endif
 
-    private IEnumerator OutputRoutine(string url) {
+    private IEnumerator OutputRoutine(string url)
+    {
         var loader = new WWW(url);
         yield return loader;
         output.texture = loader.texture;
